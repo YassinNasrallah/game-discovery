@@ -4,6 +4,7 @@ import Navigation from "../components/navigation/Navigation"
 import Input from "../components/search/Input"
 import Rawgapi from "../api/Rawgapi"
 import '../style/main.css'
+import SearchSuggestions from "../components/search/SearchSuggestions"
 
 const API = Rawgapi()
 const Main = () => {
@@ -22,7 +23,6 @@ const Main = () => {
    }
 
    useEffect(()=>{
-  
      const timer = setTimeout(async()=>{
         const game =await API._getGames(search) 
         setResult(game)
@@ -47,6 +47,7 @@ const Main = () => {
             showInput
          }}>
               <Navigation />
+           
          </Context.Provider>
        
       
