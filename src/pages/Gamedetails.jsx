@@ -20,6 +20,7 @@ const Gamedetails = () => {
 
   return (
     <>
+     <Navigation />
      <div className="game-details-page">
       <div className="game-details-container">
 
@@ -31,12 +32,18 @@ const Gamedetails = () => {
         </div>
 
         <div className="game-deatile">
-          <h1>{gameinfo.name}</h1>
-          <p>Released: {gameinfo.released}</p>
+          <div className="description">
+                 <h1>{gameinfo.name}</h1>
+                  <p>{gameinfo.description?.replace(/<[^>]+>/g, "").slice(0, 300)}...</p>
+          </div>
+         <hr />
+          <div className="game-information">
+             <p>Released: {gameinfo.released}</p>
           <p>Rating: {gameinfo.rating}/5</p>
-          <button>Buy Now</button>
+          </div>
         </div>
       </div>
+      
     </div>
 
     </>

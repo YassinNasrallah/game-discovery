@@ -1,22 +1,22 @@
 
 import Logo from './Logo'
-import Navlinks from './Navlinks'
-import Input from '../search/Input'
+
+import Input from './Input'
 import Shopicon from './Shopicon'
-import Searchicon from '../search/Searchicon'
-import SearchSuggestions from '../search/SearchSuggestions'
-import Search from '../search/Search'
+
+import SearchSuggestions from './SearchSuggestions'
+import Search from './Search'
 const Navigation = () => {
   return (
     <div className='navigation'>
        <div className="navigation-top">
           <Logo />
-          <Navlinks />
+          
           
           <Search />
            
           <div className="icons">
-             <Searchicon />
+          
              <Shopicon />
           </div>
          
