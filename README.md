@@ -1,52 +1,52 @@
 # 🎮 Game Explorer
 
-A React project built to practice working with external APIs.
+Game Explorer is a React application that lets users discover video games using the RAWG API. The project focuses on providing a clean and responsive interface for searching games and viewing detailed information about them.
 
-## 📖 About the Project
+## ✨ Current Features
 
-Game Explorer is a React application that uses the RAWG Video Games Database API to search for video games and display basic information about them.
+* 🔍 **Search Bar**
 
-The current version focuses on searching for games and displaying their names and images.
+  * Search for games by name.
+  * Displays live search suggestions while typing.
+  * Click a suggestion to navigate directly to the selected game's details page.
 
-This project is also a learning project where I am practicing how to work with APIs and integrate external data into a React application.
+* 🎮 **Game Details**
 
-## 🧠 What I Am Learning
+  * View detailed information for each game, including:
 
-* How APIs work
-* How to use `fetch()`
-* How to work with `async/await`
-* How to handle JSON responses
-* How to search API data using query parameters
-* How to display API data with `.map()`
-* How to use `useState`
-* How to use `useEffect`
-* How to create an API wrapper
-* How to implement debounced search
-* How to work with data returned from an external API
+    * Game name
+    * Cover image
+    * Rating
+    * Release date
+    * Description
 
-## 🛠️ Technologies
+* ⭐ **Best Rated Games**
+
+  * Browse highly rated games in a Swiper carousel.
+
+* 🖼️ **Hero Section**
+
+  * Responsive hero slider built with Swiper to showcase featured games.
+
+## 🚀 Planned Features
+
+* 🎥 Add game trailers.
+* 📸 Display game screenshots.
+* ❤️ Add a favorites or wishlist feature.
+* 🎮 Display additional game information such as genres, developers, publishers, and platforms.
+* 📱 Complete responsive design for all screen sizes.
+* ✨ Continue improving the UI and user experience.
+
+## 🛠️ Technologies Used
 
 * React
-* JavaScript
-* CSS
-* RAWG API
+* React Router
+* Context API
+* Swiper.js
+* RAWG Video Games Database API
+* CSS3
 
-## 🚀 Future Features
+## 🎨 Project Status
 
-* Display game ratings
-* Add more detailed game information
-* Add game descriptions
-* Add release dates
-* Add genres and platforms
-* Add video trailers
-* Create a dedicated game details page
-* Add loading states and error handling
-* Improve the user interface
+This project is currently under active development. Responsive design is still being implemented, and the interface is continuously being improved with the help of **Claude AI** to create a modern and user-friendly experience.
 
-## 🎯 Project Goal
-
-The goal of this project is to improve my understanding of API integration and React by building a game search application and gradually adding more features.
-
-## 👨‍💻 Author
-
-Yassin Nasrallah
