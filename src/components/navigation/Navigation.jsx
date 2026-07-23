@@ -2,7 +2,7 @@
 import Logo from './Logo'
 
 import Input from './Input'
-import Shopicon from './Shopicon'
+import Shopicon from './Menuicon'
 
 import SearchSuggestions from './SearchSuggestions'
 import Search from './Search'

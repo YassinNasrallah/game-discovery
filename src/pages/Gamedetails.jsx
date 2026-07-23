@@ -36,7 +36,6 @@ const Gamedetails = () => {
                  <h1>{gameinfo.name}</h1>
                   <p>{gameinfo.description?.replace(/<[^>]+>/g, "").slice(0, 300)}...</p>
           </div>
-         <hr />
           <div className="game-information">
              <p>Released: {gameinfo.released}</p>
           <p>Rating: {gameinfo.rating}/5</p>

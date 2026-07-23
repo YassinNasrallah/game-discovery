@@ -9,6 +9,7 @@ function App() {
   const API = Rawgapi()
   const [search, setSearch] = useState('')
    const [result, setResult] = useState([])
+   
    const handleChange = (event) =>{
      setSearch(event.target.value)
    }
@@ -29,7 +30,8 @@ function App() {
             search,
             result,
             handleChange,
-            setSearch
+            setSearch,
+            API
            
          }}>
       <Routes>

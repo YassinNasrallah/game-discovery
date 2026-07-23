@@ -2,9 +2,9 @@ import React from 'react'
 
 const Logo = () => {
   return (
-    <div className='logo'>
-       NSr
-    </div>
+   
+      <h3 className='logo'>NSRRATING</h3>
+    
   )
 }
 
