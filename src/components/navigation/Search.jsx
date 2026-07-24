@@ -10,8 +10,7 @@ const Search = () => {
     <div className='search-wrapper'>
         
           
-           <Input />
-       
+              <Input />
                {search.trim() !== '' && (
                  <SearchSuggestions />
                )}

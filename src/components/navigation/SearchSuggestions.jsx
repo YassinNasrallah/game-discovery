@@ -7,7 +7,7 @@ const SearchSuggestions = () => {
   return (
     <div className='SearchSuggestions'>
          <div className="suggestions" >
-             {result.map((game)=>(
+             {result.slice(0, 5).map((game)=>(
 
             <div className="content" onClick={()=> {setSearch('') ; 
             navigate(`/game/${game.id}`)}} >

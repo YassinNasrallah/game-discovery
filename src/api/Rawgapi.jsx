@@ -1,10 +1,10 @@
   
 
 const Rawgapi = () => {
-   const Api_key = '6f4621614a594832a69b57d077b5cc7a'
+   const Api_key = 'your_key'
   
    const _getGames = async(search)=>{
-    const limit = 5
+    const limit = 10
       const result = await fetch(`https://api.rawg.io/api/games?key=${Api_key}&search=${search}&page_size=${limit}`)
       const data = await result.json()
      console.log(data)
@@ -18,9 +18,16 @@ const Rawgapi = () => {
       return data
    }  
 
+   const _getGameScreenshot = async(id)=>{
+      const result = await fetch(`https://api.rawg.io/api/games/${id}/screenshots?key=${Api_key}`)
+      const data = await result.json()
+      return data.results
+   }
+
    return {
      _getGames,
-     _getGamebyid
+     _getGamebyid,
+     _getGameScreenshot
    }
    
 }
