@@ -1,7 +1,7 @@
   
 
 const Rawgapi = () => {
-   const Api_key = 'your_key'
+   const Api_key = '6f4621614a594832a69b57d077b5cc7a'
   
    const _getGames = async(search)=>{
     const limit = 10

@@ -1,5 +1,6 @@
 import React, { useContext } from 'react'
 import Context from '../../context/Context'
+import { useNavigate } from 'react-router-dom';
 // import Swiper core and required modules
 import { Scrollbar} from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -8,6 +9,7 @@ import 'swiper/css';
 
 import 'swiper/css/scrollbar';
 const Bestrating = () => {
+  const navigate = useNavigate()
     const {games} = useContext(Context)
     const bestGames =games.filter((game)=>game.rating >=4.10)
   return (
@@ -25,7 +27,7 @@ const Bestrating = () => {
 >
   {bestGames.map((game) => (
     <SwiperSlide key={game.id}>
-      <div className="games">
+      <div className="games" onClick={()=>navigate(`/game/${game.id}`)}>
     <img src={game.background_image} alt={game.name} />
     <div className="details">
       <div className="information">

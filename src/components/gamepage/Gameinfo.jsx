@@ -2,30 +2,49 @@ import React, { useContext } from 'react'
 import Context from '../../context/Context'
 
 const Gameinfo = () => {
-    const {gameinfo} = useContext(Context)
-  return (
-       <div className="game-details-page">
-      <div className="game-details-container">
+  const { gameinfo } = useContext(Context)
 
-        <div className="game-img">
-          <img
-            src={gameinfo.background_image}
-            alt={gameinfo.name}
-          />
+  return (
+    <div className="game-details-page">
+      <div className="game-details-container">
+        <div className="game-image">
+          <img src={gameinfo.background_image} alt={gameinfo.name} />
         </div>
 
-        <div className="game-deatile">
-          <div className="description">
-                 <h1>{gameinfo.name}</h1>
-                  <p>{gameinfo.description?.replace(/<[^>]+>/g, "").slice(0, 300)}...</p>
+        <div className="game-details">
+          <div className="developers">
+            {gameinfo.developers?.map((developer) => (
+              <span key={developer.id} className="developer-tag">
+                {developer.name}
+              </span>
+            ))}
           </div>
-          <div className="game-information">
-             <p>Released: {gameinfo.released}</p>
-          <p>Rating: {gameinfo.rating}/5</p>
+
+          <h1 className="game-title">{gameinfo.name}</h1>
+
+          <div className="platforms">
+            {gameinfo.parent_platforms?.map(({ platform }) => (
+              <span key={platform.id} className="platform-tag">
+                {platform.name}
+              </span>
+            ))}
+          </div>
+           <div className="genres">
+  {gameinfo.genres?.map((genre) => (
+    <span key={genre.id} className="genre-tag">
+      {genre.name}
+    </span>
+  ))}
+</div>
+
+          <h2 className="release-date">Released: {gameinfo.released}</h2>
+
+          <div className="rating">
+            <span className="rating-label">Based on {gameinfo.ratings_count} Reviews</span>
+            <div className="score">{gameinfo.rating}</div>
           </div>
         </div>
       </div>
-      
     </div>
   )
 }

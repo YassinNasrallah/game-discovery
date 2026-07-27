@@ -5,6 +5,7 @@ import Navigation from '../components/navigation/Navigation'
 import Gameinfo from '../components/gamepage/Gameinfo'
 import Context from '../context/Context'
 import GamesShots from '../components/gamepage/GamesShots'
+import Gameabout from '../components/gamepage/Gameabout'
 
 const API = Rawgapi()
 const Gamedetails = () => {
@@ -12,7 +13,7 @@ const Gamedetails = () => {
     const { id } = useParams()
     const [gameinfo, setGameinfo]=useState([])
     const [screenshots, setScreenshots] = useState([])
-
+  
     useEffect(()=>{
        const fetchgame = async()=>{
             const game = await API._getGamebyid(id)
@@ -36,10 +37,12 @@ const Gamedetails = () => {
      <Context.Provider value={{
       gameinfo,
       id,
-      screenshots
+      screenshots,
+      
      }}>
        <Gameinfo />
        <GamesShots />
+       <Gameabout />
      </Context.Provider>
      
 

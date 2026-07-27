@@ -29,7 +29,7 @@ const GamesShots = () => {
     >
           {screenshots.map((game)=>(
             <SwiperSlide key={game.id}>
-               <img src={game.image} alt="game shot" />
+               <img src={game.image} alt="game shot"/>
             </SwiperSlide>
           ))}
     </Swiper>

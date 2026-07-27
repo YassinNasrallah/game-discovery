@@ -31,8 +31,6 @@ function App() {
             result,
             handleChange,
             setSearch,
-            API
-           
          }}>
       <Routes>
         <Route path='/' element={<Main />} />

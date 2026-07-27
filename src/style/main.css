@@ -1,3 +1,6 @@
+/* ==========================================================================
+   RESET
+   ========================================================================== */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -5,6 +8,9 @@
   list-style: none;
 }
 
+/* ==========================================================================
+   DESIGN TOKENS
+   ========================================================================== */
 :root {
   --background: #17181c;
   --card-background: #1f2126;
@@ -41,6 +47,9 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+/* ==========================================================================
+   NAVIGATION
+   ========================================================================== */
 .navigation {
   width: 100%;
   background: var(--dark-ink);
@@ -67,7 +76,6 @@ body {
 .logo {
   font-family: var(--font-display);
   font-weight: 600;
-  text-transform: none;
   font-size: 26px;
   letter-spacing: 0.2px;
   color: #ffffff;
@@ -84,6 +92,64 @@ body {
   vertical-align: super;
 }
 
+.nav-links {
+  display: flex;
+  gap: 40px;
+}
+
+.nav-links .nav-item {
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.2px;
+  color: rgba(255, 255, 255, 0.6);
+  cursor: pointer;
+  transition: 0.2s ease;
+  position: relative;
+  padding-bottom: 4px;
+}
+
+.nav-links .nav-item::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0;
+  height: 1px;
+  background: var(--stamp-gold);
+  transition: width 0.2s ease;
+}
+
+.nav-links .nav-item:hover {
+  color: #ffffff;
+}
+
+.nav-links .nav-item:hover::after {
+  width: 100%;
+}
+
+.icons {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+  color: rgba(255, 255, 255, 0.75);
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.icon:hover {
+  color: #ffffff;
+  transform: scale(1.06);
+}
+
+/* ==========================================================================
+   SEARCH BAR + SUGGESTIONS DROPDOWN
+   ========================================================================== */
 .search-wrapper {
   position: relative;
   width: 460px;
@@ -120,7 +186,6 @@ body {
   flex-direction: column;
   position: absolute;
   margin: 8px 0 0;
-  gap: 0;
   top: calc(100% + 6px);
   left: 0;
   z-index: 100;
@@ -166,7 +231,7 @@ body {
   gap: 3px;
 }
 
-.game-description h1 {
+.game-description h3 {
   text-align: left;
   font-family: var(--font-body);
   font-size: 15px;
@@ -182,203 +247,228 @@ body {
   color: var(--secondary-text);
 }
 
-.icons {
+/* ==========================================================================
+   GAME DETAILS PAGE — LAYOUT
+   ========================================================================== */
+.game-details-page{
+    min-height:100vh;
+    background:#17181c;
+    padding:70px 8%;
+}
+
+.game-details-container{
+    max-width:1400px;
+    margin:auto;
+    display:flex;
+    align-items:center;
+    gap:70px;
+}
+
+/* LEFT */
+
+.game-image{
+    flex:1;
+}
+
+.game-image img{
+    width:100%;
+    height:550px;
+    object-fit:cover;
+    border-radius:18px;
+    box-shadow:0 25px 60px rgba(0,0,0,.45);
+}
+
+/* RIGHT */
+
+.game-details{
+    flex:1;
+    display:flex;
+    flex-direction:column;
+    justify-content: space-between;
+    text-align: left;
+}
+
+.developers{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+    margin-bottom:20px;
+}
+
+.developer-tag{
+    padding:8px 18px;
+    border-radius:999px;
+    background:#24262d;
+    border:1px solid #34363d;
+    color:#d4a955;
+    font-size:.9rem;
+}
+
+.game-title{
+    font-size:3.8rem;
+    color:white;
+    margin-bottom:25px;
+    line-height:1.1;
+}
+
+
+
+
+
+.game-details .score{
+    width:65px;
+    height:65px;
+    border-radius:20%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:1.4rem;
+    font-weight:bold;
+    color:#66cc33;
+    border:3px solid #66cc33;
+}
+
+.rating-label{
+    font-size:1.2rem;
+    color:#ffffff;
+}
+
+/* Platforms */
+
+.platforms{
+    display:flex;
+    flex-wrap:wrap;
+    gap:12px;
+    margin-bottom:25px;
+}
+
+
+
+/* Genres */
+
+.genres {
   display: flex;
-  align-items: center;
-  gap: 22px;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 20px 0;
 }
 
-.icon {
+.genre-tag {
+  padding: 8px 18px;
+  background: #1f2126;
+  color: #d4a955;
+  border: 1px solid #34363d;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.genre-tag:hover {
+  background: #d4a955;
+  color: #17181c;
+  border-color: #d4a955;
+}
+
+
+
+/* Bottom information */
+.info-box{
+    background:#1f2126;
+    border:1px solid #34363d;
+    border-radius:12px;
+    padding:20px;
+}
+
+
+
+
+
+
+/* Ring drawn with conic-gradient, masked into a donut shape.
+   --rating-percent and --tier-color can be set inline from JS for dynamic
+   values; they fall back to a static 94% / green if not provided. */
+.rating{
   display: flex;
-  align-items: center;
-  color: rgba(255, 255, 255, 0.75);
-  cursor: pointer;
-  transition: 0.2s ease;
+  flex-direction: column;
+  gap: 15px;
+  
 }
 
-.icon:hover {
-  color: #ffffff;
-  transform: scale(1.06);
-}
-
-.nav-links {
-  display: flex;
-  gap: 40px;
-}
-
-.nav-links .nav-item {
-  font-family: var(--font-body);
-  font-size: 14px;
-  font-weight: 500;
-  letter-spacing: 0.2px;
-  color: rgba(255, 255, 255, 0.6);
-  cursor: pointer;
-  transition: 0.2s ease;
-  position: relative;
-  padding-bottom: 4px;
-}
-
-.nav-links .nav-item::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -4px;
-  width: 0;
-  height: 1px;
-  background: var(--stamp-gold);
-  transition: width 0.2s ease;
-}
-
-.nav-links .nav-item:hover {
-  color: #ffffff;
-}
-
-.nav-links .nav-item:hover::after {
-  width: 100%;
-}
-
-.game-details-page {
-  min-height: 100vh;
-  padding: 90px 8%;
-  background: var(--background);
-  display: flex;
-}
-
-.game-details-container {
-  max-width: 1180px;
-  margin: auto;
-  display: flex;
-  gap: 72px;
-  align-items: center;
-  text-align: left;
-}
-
-.game-img {
-  flex: 1;
-  position: relative;
-}
-
-.game-img img {
-  width: 100%;
-  max-width: 560px;
-  height: 400px;
-  object-fit: cover;
-  border-radius: 14px;
-  display: block;
-  box-shadow: 0 30px 60px -20px rgba(0, 0, 0, 0.6);
-}
-
-.shot-container{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin:50px;
-  gap: 20px;
-}
-
-.shot-container img {
-  width: 400px;
-  height: 300px;
-  object-fit: cover;
-}
-
-.rating-stamp {
-  position: absolute;
-  bottom: -26px;
-  left: 32px;
-  width: 96px;
-  height: 96px;
-  border-radius: 50%;
-  background: var(--card-background);
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.rating-stamp::before {
-  content: "";
-  position: absolute;
-  inset: 6px;
-  border-radius: 50%;
-  background: conic-gradient(var(--tier-great) 0 94%, var(--border-color) 94% 100%);
-  -webkit-mask: radial-gradient(farthest-side, transparent calc(100% - 4px), #000 calc(100% - 4px));
-  mask: radial-gradient(farthest-side, transparent calc(100% - 4px), #000 calc(100% - 4px));
-}
-
-.rating-stamp .score {
+ .rating-label {
   position: relative;
   font-family: var(--font-display);
   font-weight: 600;
   font-size: 26px;
   color: var(--title-color);
+  margin: 20px 0;
 }
 
 .rating-stamp .max {
   display: none;
 }
 
-.game-deatile {
-  flex: 1;
-}
-
-.game-deatile .meta {
+.platforms span {
   font-family: var(--font-mono);
   font-size: 12px;
-  font-weight: 500;
-  letter-spacing: 1.2px;
-  text-transform: uppercase;
-  color: var(--stamp-gold);
-  margin-bottom: 14px;
-  display: block;
+  letter-spacing: 0.3px;
+  padding: 6px 14px;
+  border: 1px solid var(--border-color);
+  border-radius: 999px;
+  color: var(--secondary-text);
+  background: var(--card-background);
+  transition: 0.2s ease;
 }
 
-.description h1 {
-  font-family: var(--font-display);
-  font-size: 48px;
-  font-weight: 600;
-  line-height: 1.08;
+.platforms span:hover {
+  border-color: var(--stamp-gold);
   color: var(--title-color);
-  margin-bottom: 20px;
-  text-transform: none;
 }
 
-.game-deatile p {
-  font-size: 16px;
-  line-height: 1.65;
-  color: var(--text-color);
-  margin: 10px 0;
-  max-width: 46ch;
-}
-
+/* Bottom stat row: release date, rating, playtime, etc. */
 .game-information {
   display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  gap: 40px;
-  margin-top: 24px;
-  padding-top: 20px;
-  border-top: 1px solid var(--border-color);
-}
+  flex-direction: column;
 
+  text-align: left;
+  gap: 20px;
+  margin: 50px;
+
+}
 .game-information p {
   color: var(--secondary-text);
   font-family: var(--font-mono);
-  font-size: 13px;
-  margin: 0;
+  font-size: 18px;
+  line-height: 30px;
 }
-
-.game-information p strong {
-  display: block;
-  font-family: var(--font-display);
-  font-size: 20px;
-  font-weight: 600;
-  color: var(--title-color);
-  margin-bottom: 2px;
+.game-information h2{
+  text-align: left;
 }
 
 
 
+/* ==========================================================================
+   SCREENSHOTS STRIP
+   ========================================================================== */
+.shot-container {
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 50px auto;
+  gap: 20px;
+}
+
+.shot-container img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* ==========================================================================
+   BEST RATING / GAME CARDS GRID
+   ========================================================================== */
 .bestrating {
   text-align: left;
   padding: 60px 4%;
@@ -406,7 +496,10 @@ body {
   transition: transform 0.25s ease, border-color 0.25s ease, background 0.25s ease;
 }
 
-
+.games:hover {
+  transform: translateY(-4px);
+  border-color: var(--stamp-gold);
+}
 
 .games img {
   width: 100%;
@@ -450,6 +543,7 @@ body {
   margin: 0;
 }
 
+/* Small square score badge on each game card */
 .score {
   width: 48px;
   height: 48px;
@@ -467,12 +561,13 @@ body {
   transition: transform 0.25s ease;
 }
 
+.games:hover .score {
+  transform: scale(1.08);
+}
 
-
-
-
-
-/* Swiper theming */
+/* ==========================================================================
+   SWIPER CAROUSEL THEMING
+   ========================================================================== */
 .bestrating .swiper {
   padding-bottom: 44px;
 }
@@ -491,6 +586,9 @@ body {
   background: var(--tier-great);
 }
 
+/* ==========================================================================
+   RESPONSIVE
+   ========================================================================== */
 @media (max-width: 768px) {
   .game-details-container {
     flex-direction: column;
@@ -516,12 +614,19 @@ body {
     font-size: 20px;
   }
 
+  .platforms {
+    gap: 8px;
+  }
+
   .game-information {
     flex-wrap: wrap;
     gap: 24px;
   }
 }
 
+/* ==========================================================================
+   MISC
+   ========================================================================== */
 .demo-note {
   max-width: 1180px;
   margin: 0 auto;
