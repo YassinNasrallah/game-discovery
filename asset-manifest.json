@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/game-discovery/static/css/main.b9f1aac7.css",
-    "main.js": "/game-discovery/static/js/main.a9ad2c88.js",
+    "main.css": "/game-discovery/static/css/main.1a0291a8.css",
+    "main.js": "/game-discovery/static/js/main.7415ca3a.js",
     "static/js/453.97e32563.chunk.js": "/game-discovery/static/js/453.97e32563.chunk.js",
     "index.html": "/game-discovery/index.html",
-    "main.b9f1aac7.css.map": "/game-discovery/static/css/main.b9f1aac7.css.map",
-    "main.a9ad2c88.js.map": "/game-discovery/static/js/main.a9ad2c88.js.map",
+    "main.1a0291a8.css.map": "/game-discovery/static/css/main.1a0291a8.css.map",
+    "main.7415ca3a.js.map": "/game-discovery/static/js/main.7415ca3a.js.map",
     "453.97e32563.chunk.js.map": "/game-discovery/static/js/453.97e32563.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.b9f1aac7.css",
-    "static/js/main.a9ad2c88.js"
+    "static/css/main.1a0291a8.css",
+    "static/js/main.7415ca3a.js"
   ]
 }
