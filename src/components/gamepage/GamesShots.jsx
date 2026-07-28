@@ -25,6 +25,26 @@ const GamesShots = () => {
       spaceBetween={30}
       slidesPerView={3}
       navigation
+       breakpoints={
+        {
+          1440: {
+          slidesPerView:5
+          },
+          1024:{
+             slidesPerView:4
+          },
+          768 :{
+             slidesPerView:3
+          },
+          480:{
+            slidesPerView:2
+          },
+          320:{
+            slidesPerView:1
+          }
+      
+      }
+      }
 
     >
           {screenshots.map((game)=>(

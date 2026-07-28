@@ -6,6 +6,7 @@ import Gameinfo from '../components/gamepage/Gameinfo'
 import Context from '../context/Context'
 import GamesShots from '../components/gamepage/GamesShots'
 import Gameabout from '../components/gamepage/Gameabout'
+import '../style/Gamedetails.css'
 
 const API = Rawgapi()
 const Gamedetails = () => {
@@ -32,7 +33,7 @@ const Gamedetails = () => {
 
 
   return (
-    <>
+    <div className='main-container'>
      <Navigation />
      <Context.Provider value={{
       gameinfo,
@@ -46,7 +47,7 @@ const Gamedetails = () => {
      </Context.Provider>
      
 
-    </>
+    </div>
   )
 }
 

@@ -23,6 +23,26 @@ const Bestrating = () => {
       slidesPerView={4}
       navigation
       scrollbar={{ draggable: true }}
+      breakpoints={
+        {
+          1440: {
+          slidesPerView:5
+          },
+          1024:{
+             slidesPerView:4
+          },
+          768 :{
+             slidesPerView:3
+          },
+          480:{
+            slidesPerView:2
+          },
+          320:{
+            slidesPerView:1
+          }
+      
+      }
+      }
 
 >
   {bestGames.map((game) => (

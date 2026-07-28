@@ -18,7 +18,7 @@ const Main = () => {
 
   return (
     <div className='main-container'>
-       <Navigation /> 
+          <Navigation /> 
           <Context.Provider value={{
             games
           }}>
