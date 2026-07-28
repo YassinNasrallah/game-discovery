@@ -22,13 +22,7 @@ const Gameinfo = () => {
 
           <h1 className="game-title">{gameinfo.name}</h1>
 
-          <div className="platforms">
-            {gameinfo.parent_platforms?.map(({ platform }) => (
-              <span key={platform.id} className="platform-tag">
-                {platform.name}
-              </span>
-            ))}
-          </div>
+        
            <div className="genres">
   {gameinfo.genres?.map((genre) => (
     <span key={genre.id} className="genre-tag">
@@ -37,10 +31,10 @@ const Gameinfo = () => {
   ))}
 </div>
 
-          <h2 className="release-date">Released: {gameinfo.released}</h2>
+          <h2 className="">Released: {gameinfo.released}</h2>
 
           <div className="rating">
-            <span className="rating-label">Based on {gameinfo.ratings_count} Reviews</span>
+            <h2 className="rating-label">Based on {gameinfo.ratings_count} Reviews</h2>
             <div className="score">{gameinfo.rating}</div>
           </div>
         </div>

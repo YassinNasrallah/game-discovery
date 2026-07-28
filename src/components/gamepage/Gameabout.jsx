@@ -6,7 +6,7 @@ const Gameabout = () => {
   return (
     <div className='game-information'>
         <h2>Description</h2>
-        <p>{gameinfo.description_raw}</p>
+        <p>{gameinfo.description_raw?.slice(0,300)}...</p>
     </div>
   )
 }

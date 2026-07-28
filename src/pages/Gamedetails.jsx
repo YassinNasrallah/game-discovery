@@ -7,6 +7,7 @@ import Context from '../context/Context'
 import GamesShots from '../components/gamepage/GamesShots'
 import Gameabout from '../components/gamepage/Gameabout'
 import '../style/Gamedetails.css'
+import Platforms from '../components/gamepage/Platforms'
 
 const API = Rawgapi()
 const Gamedetails = () => {
@@ -44,6 +45,7 @@ const Gamedetails = () => {
        <Gameinfo />
        <GamesShots />
        <Gameabout />
+       <Platforms />
      </Context.Provider>
      
 

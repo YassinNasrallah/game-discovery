@@ -329,6 +329,9 @@ body {
    .main-container{
     width: 100%;
    }
+   .search-input{
+    display: none;
+   }
  }
 
 /* Large Phone */
@@ -336,11 +339,17 @@ body {
    .main-container{
     width: 100%;
    }
+   .search-input{
+    display: none;
+   }
 }
 
 /* Small Phone */
 @media (max-width: 320px) {
    .main-container{
     width: 100%;
+   }
+   .search-input{
+    display: none;
    }
  }
