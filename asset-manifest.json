@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/GameExplorer/static/css/main.b9f1aac7.css",
+    "main.js": "/GameExplorer/static/js/main.f95b7352.js",
+    "static/js/453.97e32563.chunk.js": "/GameExplorer/static/js/453.97e32563.chunk.js",
+    "index.html": "/GameExplorer/index.html",
+    "main.b9f1aac7.css.map": "/GameExplorer/static/css/main.b9f1aac7.css.map",
+    "main.f95b7352.js.map": "/GameExplorer/static/js/main.f95b7352.js.map",
+    "453.97e32563.chunk.js.map": "/GameExplorer/static/js/453.97e32563.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b9f1aac7.css",
+    "static/js/main.f95b7352.js"
+  ]
+}
