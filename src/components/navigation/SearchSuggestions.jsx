@@ -8,9 +8,8 @@ const SearchSuggestions = () => {
     <div className='SearchSuggestions'>
          <div className="suggestions" >
              {result.slice(0, 5).map((game)=>(
-
-            <div className="content" onClick={()=> {setSearch('') ; 
-            navigate(`/game/${game.id}`)}} >
+              <div className="content" onClick={()=> {setSearch('') ; 
+              navigate(`/game/${game.id}`)}} >
                  <img src={game.background_image} alt="" />
                  <div className="game-description">
                     <h3>{game.name}</h3>

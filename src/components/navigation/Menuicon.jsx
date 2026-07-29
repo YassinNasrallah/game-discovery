@@ -3,7 +3,7 @@ import { FiMenu } from "react-icons/fi";
 const Menuicon = () => {
   return (
     <div>
-      <FiMenu size={30}/>
+      <FiMenu className="menu-icon" size={30}/>
     </div>
   )
 }
