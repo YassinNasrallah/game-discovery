@@ -1,7 +1,7 @@
   
 
 const Rawgapi = () => {
-   const Api_key = '6f4621614a594832a69b57d077b5cc7a'
+   const Api_key = 'your-own-code'
   const limit = 10
    const _getGames = async(search)=>{
    
@@ -24,16 +24,25 @@ const Rawgapi = () => {
       return data.results
    }
 
-   const _getNewReleased = async(id)=>{
+   const _getNewReleased = async()=>{
       const result = await fetch(`https://api.rawg.io/api/games?key=${Api_key}&page_size=${limit}&dates=2026-07-31,2026-12-31`)
       const data = await result.json()
       return data.results
+   }
+
+   const _getPlaystationGames = async()=>{
+      const result = await fetch(`https://api.rawg.io/api/games?key=${Api_key}&page_size=${limit}&platforms=187`)
+      const data = await result.json()
+      return data.results
+
+      
    }
 
    return {
      _getGames,
      _getGamebyid,
      _getNewReleased,
+     _getPlaystationGames,
      _getGameScreenshot
    }
    
