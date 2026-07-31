@@ -7,32 +7,29 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 // Import Swiper styles
 import 'swiper/css';
 
-
-const Bestrating = () => {
-  const navigate = useNavigate()
-    const {games} = useContext(Context)
-    const bestGames =games.filter((game)=>game.rating >=4.10)
+const Newreleased = () => {
+    const navigate = useNavigate()
+    const {newreleased} = useContext(Context)
+    
   return (
+    
     <div className='games-section'>
-      <div className="section-header">
-        <h2>Best Rating</h2>
+           <div className="section-header">
+        <h2>Upcoming games</h2>
 
         <div className="swiper-buttons">
-          <button className="best-prev">←</button>
-          <button className="best-next">→</button>
+          <button className="new-prev">←</button>
+          <button className="new-next">→</button>
         </div>
 
       </div>
-  
-  
-
-  <Swiper
-   modules={[Navigation]}
-      spaceBetween={10}
-      slidesPerView={4}
+        <Swiper
+        modules={[Navigation]}
+        spaceBetween={10}
+        slidesPerView={4}
         navigation={{
-          prevEl: '.best-prev',
-          nextEl: '.best-next',
+          prevEl: '.new-prev',
+          nextEl: '.new-next',
         }}
       breakpoints={
         {
@@ -56,7 +53,7 @@ const Bestrating = () => {
       }
 
 >
-  {bestGames.map((game) => (
+  {newreleased.map((game) => (
     <SwiperSlide key={game.id}>
       <div className="games" onClick={()=>navigate(`/game/${game.id}`)}>
     <img src={game.background_image} alt={game.name} />
@@ -72,15 +69,11 @@ const Bestrating = () => {
     </SwiperSlide>
   ))}
 </Swiper>
-
-
-
-
-
-
- 
-</div>
+          
+    
+    </div>
+    
   )
 }
 
-export default Bestrating
+export default Newreleased

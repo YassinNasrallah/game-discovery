@@ -228,13 +228,13 @@ body {
 /* ==========================================================================
    BEST RATING / GAME CARDS GRID
    ========================================================================== */
-.bestrating {
+.games-section {
   text-align: left;
-  padding: 60px 4%;
+  padding: 60px 60px 2% 4%;
   background: var(--background);
 }
 
-.bestrating h2 {
+.games-section h2 {
   font-family: var(--font-display);
   font-weight: 600;
   font-size: 32px;
@@ -326,24 +326,42 @@ body {
 /* ==========================================================================
    SWIPER CAROUSEL THEMING
    ========================================================================== */
-.bestrating .swiper {
+.games-section .swiper {
   padding-bottom: 44px;
 
 }
 
-.bestrating .swiper-button-next,
-.bestrating .swiper-button-prev {
-  color: var(--title-color);
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
 }
 
-.bestrating .swiper-pagination-bullet {
-  background: var(--border-dashed);
-  opacity: 1;
+.section-header h2 {
+  margin: 0;
 }
 
-.bestrating .swiper-pagination-bullet-active {
-  background: var(--tier-great);
+.swiper-buttons {
+  display: flex;
+  gap: 8px;
 }
+
+.swiper-buttons button {
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 20px;
+  background: #222;
+  color: white;
+}
+
+.swiper-buttons button:hover {
+  background: #444;
+}
+
 
 /* ==========================================================================
    RESPONSIVE
