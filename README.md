@@ -3,7 +3,7 @@
 Game Explorer is a React application that lets users discover video games using the RAWG API. The project focuses on providing a clean and responsive interface for searching games and viewing detailed information about them.
 
 
-![Game Discovery Screenshot](https://github.com/YassinNasrallah/game-discovery/blob/8e84dc58960a56755b907da061eee49082d50a3f/src/components/assest/projectimage.png)
+![Game Discovery Screenshot](https://github.com/YassinNasrallah/game-discovery/blob/def973589c028e156a848a89797909c23638de6b/src/components/assest/projectimage.png)
 ## ✨ Current Features
 
 * 🔍 **Search Bar**
