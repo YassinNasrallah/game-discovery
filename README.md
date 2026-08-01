@@ -1,54 +1,63 @@
-# 🎮 Game Explorer
+# 🎮 Game Discovery
 
-Game Explorer is a React application that lets users discover video games using the RAWG API. The project focuses on providing a clean and responsive interface for searching games and viewing detailed information about them.
+A modern and responsive game discovery website built with **React.js** and the **RAWG Video Games Database API**. Browse thousands of games, search by title, explore game details, and discover the latest and upcoming releases through a clean, user-friendly interface.
 
+## ✨ Features
 
-![Game Discovery Screenshot](https://github.com/YassinNasrallah/game-discovery/blob/def973589c028e156a848a89797909c23638de6b/src/components/assest/projectimage.png)
-## ✨ Current Features
-
-* 🔍 **Search Bar**
-
-  * Search for games by name.
-  * Displays live search suggestions while typing.
-  * Click a suggestion to navigate directly to the selected game's details page.
-
-* 🎮 **Game Details**
-
-  * View detailed information for each game, including:
-
-    * Game name
-    * Cover image
-    * Rating
-    * Release date
-    * Description
-
-* ⭐ **Best Rated Games**
-
-  * Browse highly rated games in a Swiper carousel.
-
-* 🖼️ **Hero Section**
-
-  * Responsive hero slider built with Swiper to showcase featured games.
-
-## 🚀 Planned Features
-
-* 🎥 Add game trailers.
-* 📸 Display game screenshots.
-* ❤️ Add a favorites or wishlist feature.
-* 🎮 Display additional game information such as genres, developers, publishers, and platforms.
-* 📱 Complete responsive design for all screen sizes.
-* ✨ Continue improving the UI and user experience.
+* 🔍 Search for games by name with live search suggestions.
+* 🏆 Browse top-rated games in an interactive Swiper slider.
+* 🆕 View newly released games.
+* 📅 Explore upcoming game releases fetched directly from the RAWG API.
+* 🎮 Browse PlayStation games using dedicated API requests.
+* 🖼️ View screenshots for every game on the Game Details page.
+* 🕹️ Display supported platforms for each game.
+* 📖 Read detailed game information, including description, release date, and rating.
+* 📱 Fully responsive design optimized for desktop, tablet, and mobile devices.
+* ⚡ Fast and dynamic data fetching using the Fetch API.
+* 🧭 Client-side routing with React Router.
 
 ## 🛠️ Technologies Used
 
-* React
+* React.js
+* JavaScript (ES6+)
+* HTML5
+* CSS3
 * React Router
-* Context API
 * Swiper.js
 * RAWG Video Games Database API
-* CSS3
 
-## 🎨 Project Status
+## 📂 Pages
 
-This project is currently under active development. Responsive design is still being implemented, and the interface is continuously being improved with the help of **Claude AI** to create a modern and user-friendly experience.
+### Home
+
+* Hero section featuring top-rated games.
+* Search bar with live suggestions.
+* New Releases section.
+* Upcoming Games section.
+* PlayStation Games section.
+
+### Game Details
+
+* Game title and background image.
+* Game description.
+* Release date.
+* Rating.
+* Supported platforms.
+* Game screenshots gallery.
+
+## 📡 API Endpoints Used
+
+* Search Games
+* Game Details
+* Game Screenshots
+* Upcoming Games
+* New Releases
+* PlayStation Games
+
+## 👨‍💻 Author
+
+**Yassin Nassrallah**
+
+GitHub: https://github.com/YassinNasrallah
+
 
