@@ -1,9 +1,11 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { Link } from 'react-router-dom'
+import Context from '../../context/Context'
 
 const Navlinks = () => {
+    const {openmenu} = useContext(Context)
   return (
-    <ul className='navlinks'> 
+    <ul className={`navlinks ${openmenu?"active" : ''} `}> 
         <Link to='/' className='nav-item'>Home</Link>
         <li className='nav-item'>Platform
             <ul className='dropdown-menu'>

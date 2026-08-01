@@ -72,8 +72,14 @@ body {
   padding: 15px 48px;
   background: var(--dark-ink);
 }
-.menu-icon{
+.menu-button{
   display: none;
+  background: none;
+  cursor: pointer;
+  border: none;
+}
+.menu-icon{
+  color: #8b8d97;
 }
 
 .logo{
@@ -388,6 +394,26 @@ body {
    .search-input{
     display: none;
    }
+   .navlinks{
+    display: none;
+    flex-direction: column;
+   width: 100%;
+    z-index: 100;
+    position: absolute;
+    top: 50px;
+    background: #0d0e10;
+    left: 0;
+   }
+
+   .menu-button{
+    display: flex;
+   }
+
+  .navlinks.active{
+    display: flex;
+  }
+ 
+   
  }
 
 /* Large Phone */
@@ -398,6 +424,24 @@ body {
    .search-input{
     display: none;
    }
+     .navlinks{
+    display: none;
+    flex-direction: column;
+    text-align: left;
+   width: 100%;
+    z-index: 100;
+    position: absolute;
+    top: 50px;
+    background: #0d0e10;
+    left: 0;
+   }
+   .menu-button{
+    display: flex;
+   }
+
+  .navlinks.active{
+    display:flex;
+  }
 }
 
 /* Small Phone */
@@ -408,4 +452,22 @@ body {
    .search-input{
     display: none;
    }
+     .navlinks{
+    display: none;
+    flex-direction: column;
+    text-align: left;
+   width: 100%;
+    z-index: 100;
+    position: absolute;
+    top: 50px;
+    background: #0d0e10;
+    left: 0;
+   }
+   .menu-button{
+    display: flex;
+   }
+
+  .navlinks.active{
+    display: flex;
+  }
  }

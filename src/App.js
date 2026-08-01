@@ -7,11 +7,17 @@ import Rawgapi from "./api/Rawgapi"
 import { Routes, Route } from "react-router-dom";
 function App() {
   const API = Rawgapi()
+  const [openmenu, setOpenmenu] = useState(false)
   const [search, setSearch] = useState('')
    const [result, setResult] = useState([])
    
    const handleChange = (event) =>{
      setSearch(event.target.value)
+     
+   }
+
+   const handleClick = () =>{
+    setOpenmenu(prev => !prev)
    }
 
    useEffect(()=>{
@@ -31,6 +37,8 @@ function App() {
             result,
             handleChange,
             setSearch,
+            handleClick ,
+            openmenu
          }}>
       <Routes>
         <Route path='/' element={<Main />} />
