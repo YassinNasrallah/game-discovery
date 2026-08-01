@@ -5,7 +5,7 @@ A modern and responsive game discovery website built with **React.js** and the *
 
 <p align="center">
   <img src="src/components/assest/projectimage.png" width="45%" />
-  <img src="src/components/assest/responsive.png" width="45%" />
+  <img src="src/components/assest/responsive.png" width="45%" heigth="500px" />
 </p>
 ## ✨ Features
 
