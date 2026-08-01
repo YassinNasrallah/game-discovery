@@ -3,7 +3,10 @@
 A modern and responsive game discovery website built with **React.js** and the **RAWG Video Games Database API**. Browse thousands of games, search by title, explore game details, and discover the latest and upcoming releases through a clean, user-friendly interface.
 
 
-![Home](https://raw.githubusercontent.com/YassinNasrallah/game-discovery/2b0c8d800783220d6a2815aae4aa4073cf5f442a/src/components/assest/projectimage.png)
+<p align="center">
+  <img src="src/components/assest/projectimage.png" width="45%" />
+  <img src="src/components/assest/responsive.png" width="45%" />
+</p>
 ## ✨ Features
 
 * 🔍 Search for games by name with live search suggestions.
